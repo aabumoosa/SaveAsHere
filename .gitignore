@@ -1,0 +1,8 @@
+.build/
+.DS_Store
+*.xcuserstate
+build/
+docs/findings/raw/
+# Private working notes — not published
+docs/state/
+docs/superpowers/
