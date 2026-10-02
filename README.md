@@ -7,7 +7,7 @@ It keeps the filename the application suggested, and it **never completes the sa
 Confirming or cancelling is always yours.
 
 <p align="center">
-  <img src="docs/images/menubar.png" alt="SaveAsHere's ⤓ icon in the macOS menu bar" width="124">
+  <img src="docs/images/menubar.png" alt="SaveAsHere's ⤓ menu-bar icon" width="44">
 </p>
 
 > [النسخة العربية في الأسفل](#بالعربية)
