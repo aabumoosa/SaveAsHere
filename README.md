@@ -7,7 +7,12 @@ It keeps the filename the application suggested, and it **never completes the sa
 Confirming or cancelling is always yours.
 
 <p align="center">
-  <img src="docs/images/menubar.png" alt="SaveAsHere's ⤓ menu-bar icon" width="44">
+  <img src="docs/images/demo.gif" alt="A Save As panel opens in another folder and SaveAsHere moves it to the document's folder by itself" width="800">
+</p>
+
+<p align="center">
+  <img src="docs/images/menubar.png" alt="SaveAsHere's ⤓ menu-bar icon" width="44"><br>
+  <sub>Lives in the menu bar as ⤓</sub>
 </p>
 
 > [النسخة العربية في الأسفل](#بالعربية)

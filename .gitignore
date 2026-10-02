@@ -6,3 +6,5 @@ docs/findings/raw/
 # Private working notes — not published
 docs/state/
 docs/superpowers/
+# Local GitHub token — never commit
+.gh-token
