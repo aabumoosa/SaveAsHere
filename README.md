@@ -46,13 +46,21 @@ Tested on macOS 26.6 and macOS 27.
 | Application | Result |
 |---|---|
 | TextEdit, Preview, Word, Excel, Xcode, VS Code | Works |
-| Numbers, Pages | Not supported yet — they do not expose the document's path through Accessibility. Planned via Apple Events |
+| Numbers, Pages | Works on macOS 27. On macOS 26.6 they did not expose the document's path, so the agent did nothing there |
 | Apps with their own custom save dialogs (most Adobe apps) | Cannot be supported — there is no standard folder field to drive |
 
 Be aware that in testing, most of the supported apps **already opened the panel in the
 document's folder** when the document had just been opened from disk. SaveAsHere is most
 useful when an app remembers a different "last used" folder. Full measurements:
 [`docs/findings/app-support.md`](docs/findings/app-support.md).
+
+Two cases where the agent does less:
+
+- **A document that has never been saved** has no folder yet, so the agent leaves the
+  panel alone.
+- **Documents stored in iCloud Drive** are moved correctly, but the agent cannot confirm
+  the move, so the menu shows "unverified". The panel names the folder after the app
+  (for example "TextEdit — iCloud"), while the folder on disk is called `Documents`.
 
 ---
 
@@ -272,8 +280,11 @@ as long as you keep the copyright notice. It comes with no warranty.
 
 ### ما يعمل الآن
 
-يعمل في TextEdit وPreview وWord وExcel وXcode وVS Code. ولا يعمل بعد في Numbers وPages،
-ولا في البرامج التي لها نوافذ حفظ خاصة بها مثل أكثر برامج Adobe.
+يعمل في TextEdit وPreview وWord وExcel وXcode وVS Code، ويعمل في Numbers وPages على
+macOS 27. ولا يعمل في البرامج التي لها نوافذ حفظ خاصة بها مثل أكثر برامج Adobe.
+
+ولا يفعل البرنامج شيئًا مع مستند لم يُحفظ من قبل، لأنه ليس له مجلد بعد. وإذا كان المستند في
+iCloud Drive فإن البرنامج ينقل النافذة، لكنه لا يستطيع أن يتأكد من النقل، فيعرض «unverified».
 
 ### الترخيص
 
